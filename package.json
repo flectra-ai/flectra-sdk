@@ -1,0 +1,74 @@
+{
+  "name": "@flectra/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Flectra robot attestation protocol",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./robot": {
+      "types": "./dist/robot/index.d.ts",
+      "import": "./dist/robot/index.js"
+    },
+    "./attestation": {
+      "types": "./dist/attestation/index.d.ts",
+      "import": "./dist/attestation/index.js"
+    },
+    "./merkle": {
+      "types": "./dist/merkle/index.d.ts",
+      "import": "./dist/merkle/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "flectra",
+    "robot",
+    "attestation",
+    "blockchain",
+    "base",
+    "ethereum",
+    "merkle",
+    "sdk"
+  ],
+  "author": "Flectra AI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flectra-ai/flectra-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flectra-ai/flectra-sdk/issues"
+  },
+  "homepage": "https://flectra.xyz",
+  "dependencies": {
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
