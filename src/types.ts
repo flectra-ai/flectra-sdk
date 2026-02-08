@@ -198,12 +198,13 @@ export interface FlectraClientOptions {
 // ============================================================================
 
 export const BASE_SEPOLIA_ADDRESSES = {
-  robotId: '0x0000000000000000000000000000000000000000' as Address,
-  attestationRegistry: '0x0000000000000000000000000000000000000000' as Address,
-  staking: '0x0000000000000000000000000000000000000000' as Address,
+  robotId: '0x3b0fCF2D21643cB347E006A289Ee64d3f3e08415' as Address,
+  attestationRegistry: '0x1ae2aA8C70400e5be3C12aE7B93ae33Af9D14d92' as Address,
+  staking: '0xB452e082ba744C22D506Dcf2DaaEd21A490d1598' as Address,
   usdc: '0x036CbD53842c5426634e7929541eC2318f3dCF7e' as Address, // Base Sepolia USDC
 } as const
 
+// Note: Mainnet addresses will be updated after mainnet deployment
 export const BASE_MAINNET_ADDRESSES = {
   robotId: '0x0000000000000000000000000000000000000000' as Address,
   attestationRegistry: '0x0000000000000000000000000000000000000000' as Address,
